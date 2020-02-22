@@ -1,8 +1,34 @@
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { ThemeProvider } from '@material-ui/core/styles'
+import App from 'next/app'
+import Head from 'next/head'
 import React from 'react'
+import theme from '~/styles/theme'
 import '~/styles/global.scss'
 
-const App = ({ Component, pageProps, router, err }) => {
-  return <Component {...pageProps} {...router} {...err} />
-}
+export default class MyApp extends App {
+  componentDidMount() {
+    const jssStyles = document.querySelector('#jss-server-side')
 
-export default App
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles)
+    }
+  }
+
+  render() {
+    const { Component, pageProps, router, err } = this.props
+
+    return (
+      <>
+        <Head>
+          <title>Quero</title>
+          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        </Head>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Component {...pageProps} {...router} {...err} />
+        </ThemeProvider>
+      </>
+    )
+  }
+}
