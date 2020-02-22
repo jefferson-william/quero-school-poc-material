@@ -1,0 +1,64 @@
+@import '../lib/fontawesome/fontawesome';
+@import './font-awesome-brands';
+@import './fonts.scss';
+@import '../lib/zilla/zilla.scss';
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+html {
+  display: table;
+}
+html,
+body,
+#root,
+#root > div,
+#__next,
+#__next > div {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+i {
+  color: var(--color-primary);
+}
+hr {
+  width: 100%;
+  border-top: 1px solid var(--color-alpha-gray-016);
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.fal,
+.far,
+.fab,
+.fas {
+  font-size: var(--size-icon-large);
+  font-weight: normal;
+}
+.fa,
+.fal {
+  font-family: 'Font Awesome Light Regular';
+  font-weight: 600;
+}
+.fas {
+  font-family: 'Font Awesome Solid Regular';
+}
+.far {
+  font-family: 'Font Awesome Solid Regular';
+}
+.fab {
+  font-family: 'Font Awesome Brands Regular';
+}
+.container {
+  max-width: var(--size-screen-extra-large);
+  margin: 0 auto;
+  padding: 0 16px;
+}
