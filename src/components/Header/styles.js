@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { breakpoints } from '~/styles/metrics'
 
 export const Header = styled.header`
-  background: white;
   .header {
     &__container {
       justify-content: center;

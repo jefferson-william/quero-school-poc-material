@@ -39,6 +39,9 @@ img {
   height: auto;
   object-fit: contain;
 }
+input::placeholder {
+  font-family: var(--font-family-default);
+}
 .fa,
 .fal,
 .far,

@@ -13,7 +13,12 @@ export default function({ children, elevation }) {
           </Typography>
         </Container>
       </Wrapper>
-      {children}
+      {children && (
+        <div className="header-content__wrap">
+          <Wrapper elevation={4} className="header-content__wrap-background" />
+          {children}
+        </div>
+      )}
     </HeaderContent>
   )
 }

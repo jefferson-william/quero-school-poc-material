@@ -35,6 +35,7 @@ module.exports = {
     ],
     'max-len': ['error', { code: 120 }],
     'import/prefer-default-export': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js', '.ts', '.tsx'] }],
     'react/jsx-props-no-spreading': 'off',
