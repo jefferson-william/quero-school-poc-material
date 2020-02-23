@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import Home from '~/pages/home'
 
 export default function() {
   return (
@@ -7,6 +8,7 @@ export default function() {
       <Head>
         <title>Quero</title>
       </Head>
+      <Home />
     </div>
   )
 }

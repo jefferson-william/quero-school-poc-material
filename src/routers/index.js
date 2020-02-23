@@ -1,10 +1,13 @@
 import React from 'react'
-import { BrowserRouter, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Home from '~/pages/home'
 
 export default function() {
   return (
     <BrowserRouter>
-      <Switch />
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
     </BrowserRouter>
   )
 }
