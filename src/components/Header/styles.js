@@ -26,4 +26,7 @@ export const Header = styled.header`
 `
 export const Wrapper = styled(Paper)`
   padding: var(--space-medium) 0;
+  &.header__wraper {
+    border-radius: 0;
+  }
 `
