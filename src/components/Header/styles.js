@@ -9,11 +9,14 @@ export const Header = styled.header`
       justify-content: center;
       display: flex;
       > div:first-child {
+        align-items: center;
         flex: 1;
+        display: flex;
       }
     }
     &__logo {
-      max-width: 136px;
+      display: block;
+      width: 136px;
     }
   }
   @media (min-width: ${breakpoints.md}) {
