@@ -1,5 +1,6 @@
+@import '@quero/zilla-dictionary/build/web/default/tokens';
 @import '../lib/fontawesome/fontawesome';
-@import './font-awesome-brands';
+@import '../lib/fontawesome/fontawesome-brands';
 @import './fonts.scss';
 
 *,
@@ -23,6 +24,9 @@ body,
   height: 100%;
   margin: 0;
 }
+body {
+  font-family: var(--font-family-default);
+}
 i {
   color: var(--color-primary);
 }
@@ -35,10 +39,13 @@ img {
   height: auto;
   object-fit: contain;
 }
+.fa,
 .fal,
 .far,
 .fab,
 .fas {
+  width: 24px;
+  height: 24px;
   font-size: var(--size-icon-large);
   font-weight: normal;
 }

@@ -3,6 +3,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import App from 'next/app'
 import Head from 'next/head'
 import React from 'react'
+import GlobalStyle from '~/styles/global'
 import theme from '~/styles/theme'
 import '~/styles/global.scss'
 
@@ -26,6 +27,7 @@ export default class MyApp extends App {
         </Head>
         <ThemeProvider theme={theme}>
           <CssBaseline />
+          <GlobalStyle />
           <Component {...pageProps} {...router} {...err} />
         </ThemeProvider>
       </>
