@@ -1,11 +1,20 @@
 import useAutocomplete from '@material-ui/lab/useAutocomplete'
-import React, { useState, useMemo, useCallback } from 'react'
+import React, { useMemo, useCallback } from 'react'
 import shortid from 'shortid'
 import { HomeAutocomplete } from './styles'
 
-export default function({ placeholder, className, icon, onClick, handleChange, isShowOptions, data }) {
+export default function({
+  placeholder,
+  className,
+  value,
+  icon,
+  handleClick,
+  handleChange,
+  handleClose,
+  isShowOptions,
+  data,
+}) {
   const id = `home-autocomplete-${shortid.generate()}`
-  const [value, UseValue] = useState('')
 
   const { getRootProps, getInputProps, getListboxProps, getOptionProps, groupedOptions } = useAutocomplete({
     id,
@@ -13,22 +22,38 @@ export default function({ placeholder, className, icon, onClick, handleChange, i
     getOptionLabel: option => option,
   })
 
-  const length = useMemo(() => value && value.length, [value])
+  const inputProps = getInputProps()
 
-  const OnChange = useCallback(event => {
-    handleChange(event)
-    UseValue(event.target.value)
-  }, [])
+  const length = useMemo(() => inputProps.value.length, [inputProps.value])
+
+  const OnChange = useCallback(
+    event => {
+      inputProps.onChange(event)
+
+      handleChange(event)
+    },
+    [inputProps.value]
+  )
+
+  const OnClose = useCallback(
+    option => () => {
+      const event = { target: { value: option } }
+      inputProps.onChange(event)
+      handleChange(event)
+      handleClose()
+    },
+    [inputProps.value]
+  )
 
   return (
     <HomeAutocomplete className={`home-autocomplete ${className}`}>
       <div className="home-autocomplete__wrap" {...getRootProps()}>
         <input
-          {...getInputProps()}
-          value={value}
+          {...inputProps}
+          value={value || inputProps.value}
           className="home-autocomplete__field"
           placeholder={placeholder}
-          onClick={onClick}
+          onClick={handleClick}
           onChange={OnChange}
         />
         <i className={`fa ${icon || 'fa-chevron-down'} home-autocomplete__icon`} />
@@ -37,7 +62,9 @@ export default function({ placeholder, className, icon, onClick, handleChange, i
       {isShowOptions && groupedOptions.length > 0 && (
         <ul {...getListboxProps()}>
           {groupedOptions.map((option, index) => (
-            <li {...getOptionProps({ option, index })}>{option}</li>
+            <li key={option} {...getOptionProps({ option, index })} onClick={OnClose(option)}>
+              {option}
+            </li>
           ))}
         </ul>
       )}

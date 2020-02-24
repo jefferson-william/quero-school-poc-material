@@ -1,7 +1,7 @@
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import Header from '~/components/Header'
 import HomeAutocomplete from '~/components/HomeAutocomplete'
 import { HomeSearch, Wrapper, SearchDialog } from './styles'
@@ -46,7 +46,7 @@ export default function({ elevation }) {
     property => event => {
       UseData({ ...data, [property]: event.target.value })
     },
-    [data, prop]
+    [data, prop, toggle]
   )
 
   return (
@@ -57,19 +57,19 @@ export default function({ elevation }) {
             value={data.city}
             placeholder="Cidade"
             className="home-autocomplete--first"
-            onClick={HandleToggleProp('city')}
+            handleClick={HandleToggleProp('city')}
             handleChange={SetData('city')}
           />
           <HomeAutocomplete
             value={data.neighborhood}
             placeholder="Bairro"
-            onClick={HandleToggleProp('neighborhood')}
+            handleClick={HandleToggleProp('neighborhood')}
             handleChange={SetData('neighborhood')}
           />
           <HomeAutocomplete
             value={data.year}
             placeholder="Ano/Série"
-            onClick={HandleToggleProp('year')}
+            handleClick={HandleToggleProp('year')}
             handleChange={SetData('year')}
           />
           <Button className="home-search__action" variant="contained" disableElevation disableRipple>
@@ -82,8 +82,9 @@ export default function({ elevation }) {
             <HomeAutocomplete
               placeholder={PROPERTIES[prop]}
               className="home-search-dialog__home-autocomplete"
-              icon="fa-search"
+              icon="fa-times"
               handleChange={SetData(prop)}
+              handleClose={() => UseToggle(!toggle)}
               data={DATA[prop]}
               isShowOptions
             />
