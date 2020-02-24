@@ -27,6 +27,13 @@ export const HomeAutocomplete = styled.div`
         color: #333;
       }
     }
+    &__info {
+      display: block;
+      padding: var(--space-medium);
+      font-size: 16px;
+      color: #333;
+      background: ${grey[200]};
+    }
   }
   &.home-autocomplete {
     &--first {
@@ -37,12 +44,16 @@ export const HomeAutocomplete = styled.div`
     }
   }
   & + .home-autocomplete {
-    border-top: 1px solid ${grey[300]};
+    border-top: 1px solid ${grey.A100};
   }
   > div {
     height: 100%;
   }
-  > ul {
-    display: none;
+  li {
+    display: block;
+    border-bottom: 1px solid ${grey.A100};
+    padding: var(--space-medium);
+    font-size: 16px;
+    color: #333;
   }
 `

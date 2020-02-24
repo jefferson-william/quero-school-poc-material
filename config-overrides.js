@@ -68,7 +68,7 @@ module.exports = override(
       ],
     })
 
-    config.plugins.push(
+    configuration.plugins.push(
       new webpack.optimize.LimitChunkCountPlugin({
         maxChunks: 1,
       })
