@@ -1,15 +1,12 @@
 import styled from 'styled-components'
 
-export const HomeSteps = styled.main`
+export const HomeSteps = styled.section`
   text-align: center;
-  h2 {
-    margin: var(--space-extra-large) 0;
-  }
   ul {
     list-style-type: none;
   }
-  p {
-    margin-bottom: var(--space-jumbo);
+  li + li {
+    margin-top: var(--space-jumbo);
   }
   svg {
     height: 64px;
