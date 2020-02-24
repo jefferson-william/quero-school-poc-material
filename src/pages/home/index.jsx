@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '~/components/Footer'
 import Header from '~/components/Header'
 import HeaderContent from '~/components/HeaderContent'
 import HomeSearch from '~/components/HomeSearch'
@@ -13,6 +14,7 @@ export default function() {
           <HomeSearch elevation={12} />
         </HeaderContent>
       </Header>
+      <Footer />
     </>
   )
 }
