@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '~/components/Footer'
 import Header from '~/components/Header'
 import HeaderContent from '~/components/HeaderContent'
+import HomeMain from '~/components/HomeMain'
 import HomeSearch from '~/components/HomeSearch'
 import Menu from '~/components/Menu'
 
@@ -14,6 +15,7 @@ export default function() {
           <HomeSearch elevation={12} />
         </HeaderContent>
       </Header>
+      <HomeMain />
       <Footer />
     </>
   )
