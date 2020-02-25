@@ -11,7 +11,9 @@ export default function() {
     <Footer>
       <Container maxWidth="lg" className="footer">
         <div className="footer__find-scholarships">
-          <h3 className="footer__title">Encontre bolsas</h3>
+          <h3 className="footer__title">
+            <strong>Encontre bolsas</strong>
+          </h3>
           <div className="footer__find-scholarships__examples">
             <div>
               <span>Ensino Infantil</span>

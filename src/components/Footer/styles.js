@@ -19,7 +19,6 @@ export const Footer = styled.footer`
     }
     &__title {
       margin-bottom: var(--size-large);
-      font-family: proxima-nova-bold, sans-serif;
       font-size: 16px;
     }
     &__find-scholarships {

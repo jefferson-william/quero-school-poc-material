@@ -45,7 +45,6 @@ export default function() {
           value={data}
           label="Mostrando escolas perto de"
           placeholder="Sua cidade"
-          className="home-autocomplete--first"
           handleClick={HandleToggle}
           handleChange={SetData}
           isShowOptions={false}
@@ -72,7 +71,7 @@ export default function() {
             state="São Paulo"
             options={['Educação Infantil']}
             discount={71}
-            price={504.02}
+            price="R$ 504,02"
           />
         ))}
       </Container>

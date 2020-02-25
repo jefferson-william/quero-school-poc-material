@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 export const HomeAutocomplete = styled.div`
   width: 100%;
-  height: 70px;
   .home-autocomplete {
     &__icon {
       position: absolute;
@@ -35,6 +34,7 @@ export const HomeAutocomplete = styled.div`
     }
     &__wrap {
       position: relative;
+      height: 70px;
     }
   }
   &.home-autocomplete {
