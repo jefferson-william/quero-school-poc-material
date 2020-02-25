@@ -4,7 +4,7 @@ import { breakpoints } from '~/styles/metrics'
 export const Footer = styled.footer`
   width: 100%;
   background: var(--color-blue-500);
-  padding: var(--space-jumbo) var(--size-medium);
+  padding: var(--space-jumbo) 0;
   margin-top: var(--space-extra-giant);
   font-size: var(--size-medium);
   color: #fff;

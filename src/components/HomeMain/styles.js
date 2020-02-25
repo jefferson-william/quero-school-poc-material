@@ -6,6 +6,7 @@ export const HomeMain = styled.main`
   }
   h2 {
     margin: 0 0 var(--space-extra-large) 0;
+    text-align: center;
   }
   .home-main {
     &__container {

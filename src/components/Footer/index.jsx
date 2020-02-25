@@ -1,3 +1,4 @@
+import Container from '@material-ui/core/Container'
 import React from 'react'
 import { ReactComponent as LogoFolha } from '~/assets/images/icon-folha.svg'
 import { ReactComponent as LogoGlobo } from '~/assets/images/icon-globo.svg'
@@ -8,7 +9,7 @@ import { Footer } from './styles'
 export default function() {
   return (
     <Footer>
-      <div className="footer container">
+      <Container maxWidth="lg" className="footer">
         <div className="footer__find-scholarships">
           <h3 className="footer__title">Encontre bolsas</h3>
           <div className="footer__find-scholarships__examples">
@@ -63,7 +64,7 @@ export default function() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </Footer>
   )
 }

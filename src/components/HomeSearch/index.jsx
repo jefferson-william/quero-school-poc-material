@@ -1,10 +1,11 @@
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
-import React, { useState, useCallback, useEffect } from 'react'
+import React, { useState, useCallback } from 'react'
 import Header from '~/components/Header'
 import HomeAutocomplete from '~/components/HomeAutocomplete'
-import { HomeSearch, Wrapper, SearchDialog } from './styles'
+import HomeSearchDialog from '~/components/HomeSearchDialog'
+import { HomeSearch, Wrapper } from './styles'
 
 export const PROPERTIES = {
   city: 'Cidade',
@@ -77,18 +78,18 @@ export default function({ elevation }) {
               Buscar bolsas
             </Typography>
           </Button>
-          <SearchDialog open={toggle} onClose={HandleToggle} className="home-search-dialog">
+          <HomeSearchDialog open={toggle} onClose={HandleToggle}>
             <Header />
             <HomeAutocomplete
               placeholder={PROPERTIES[prop]}
               className="home-search-dialog__home-autocomplete"
-              icon="fa-times"
+              icon="fa-search"
               handleChange={SetData(prop)}
               handleClose={() => UseToggle(!toggle)}
               data={DATA[prop]}
               isShowOptions
             />
-          </SearchDialog>
+          </HomeSearchDialog>
         </Wrapper>
       </Container>
     </HomeSearch>

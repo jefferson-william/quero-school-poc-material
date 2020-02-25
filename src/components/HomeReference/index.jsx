@@ -17,23 +17,23 @@ export default function() {
         <Typography variant="body1">
           Publicações e prêmios estão destacando nossos resultados e diferenciais:
         </Typography>
+        <ul>
+          <li>
+            <img src={LogoGlobo} alt="Logo Globo" />
+          </li>
+          <li>
+            <img src={LogoFolha} alt="Logo Folha" />
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <img src={LogoVeja} alt="Logo Veja" />
+          </li>
+          <li>
+            <img src={LogoEpoca} alt="Logo Época" />
+          </li>
+        </ul>
       </Container>
-      <ul>
-        <li>
-          <img src={LogoGlobo} alt="Logo Globo" />
-        </li>
-        <li>
-          <img src={LogoFolha} alt="Logo Folha" />
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <img src={LogoVeja} alt="Logo Veja" />
-        </li>
-        <li>
-          <img src={LogoEpoca} alt="Logo Época" />
-        </li>
-      </ul>
     </HomeReference>
   )
 }

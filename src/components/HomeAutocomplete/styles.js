@@ -2,7 +2,6 @@ import { grey } from '@material-ui/core/colors'
 import styled from 'styled-components'
 
 export const HomeAutocomplete = styled.div`
-  position: relative;
   width: 100%;
   height: 70px;
   .home-autocomplete {
@@ -34,6 +33,9 @@ export const HomeAutocomplete = styled.div`
       color: #333;
       background: ${grey[200]};
     }
+    &__wrap {
+      position: relative;
+    }
   }
   &.home-autocomplete {
     &--first {
@@ -48,6 +50,10 @@ export const HomeAutocomplete = styled.div`
   }
   > div {
     height: 100%;
+  }
+  label {
+    display: block;
+    margin-bottom: var(--space-medium);
   }
   li {
     display: block;
