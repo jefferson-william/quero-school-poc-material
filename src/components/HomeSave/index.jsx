@@ -1,4 +1,5 @@
 import Container from '@material-ui/core/Container'
+import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
 import React, { useState, useCallback } from 'react'
 import Header from '~/components/Header'
@@ -74,6 +75,9 @@ export default function() {
             price="R$ 504,02"
           />
         ))}
+        <Link variant="h5" className="home-save__action">
+          <strong>Ver lista completa de bolsas</strong>
+        </Link>
       </Container>
     </HomeSave>
   )
