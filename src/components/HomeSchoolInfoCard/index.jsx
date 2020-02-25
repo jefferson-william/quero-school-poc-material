@@ -3,9 +3,10 @@ import Typography from '@material-ui/core/Typography'
 import React from 'react'
 import { HomeSchoolInfoCard } from './styles'
 
-export default function({ name, type, address, city, state, options }) {
+export default function({ name, type, address, city, state, options, left, className }) {
   return (
-    <HomeSchoolInfoCard className="home-school-info-card">
+    <HomeSchoolInfoCard className={`home-school-info-card ${className}`}>
+      {left}
       <Link className="home-school-info-card__name" variant="h5">
         <strong>{name}</strong>
       </Link>

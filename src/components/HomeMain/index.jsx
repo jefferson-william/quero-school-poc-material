@@ -1,4 +1,5 @@
 import React from 'react'
+import HomeMostPopularSchools from '~/components/HomeMostPopularSchools'
 import HomeReference from '~/components/HomeReference'
 import HomeSave from '~/components/HomeSave'
 import HomeSteps from '~/components/HomeSteps'
@@ -10,6 +11,7 @@ export default function() {
       <HomeSteps />
       <HomeReference />
       <HomeSave />
+      <HomeMostPopularSchools />
     </HomeMain>
   )
 }
