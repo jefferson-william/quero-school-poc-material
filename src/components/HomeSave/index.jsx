@@ -63,8 +63,9 @@ export default function() {
             isShowOptions
           />
         </HomeSearchDialog>
-        {[1, 2].map(() => (
+        {[1, 2].map(value => (
           <HomeSchoolSaveCard
+            key={value}
             name="Escola Recanto Do Diver"
             type="Rede privada"
             address="Rua Tibério, 265"

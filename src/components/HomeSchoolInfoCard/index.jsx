@@ -29,7 +29,7 @@ export default function({ name, type, address, city, state, options, left, class
       </div>
       <div className="home-school-info-card__options">
         {options.map(option => (
-          <Link className="home-school-info-card__label" variant="body2" component="span">
+          <Link key={option} className="home-school-info-card__label" variant="body2" component="span">
             <strong>{option}</strong>
           </Link>
         ))}
